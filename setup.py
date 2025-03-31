@@ -27,13 +27,13 @@ long_description = read_file("README.md")
 # Package configuration
 setup(
     # Basic package information
-    name="vortex-db",
+    name="vortex",
     version="0.1.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     # Metadata
     description=(
-        "A lightweight, MySQL-compatible database implemented in pure Python, "
+        "A lightweight, MySQL Client-compatible database implemented in pure Python, "
         "designed for embedded use and flexible data management."
     ),
     long_description=long_description,
@@ -60,20 +60,20 @@ setup(
     # Requirements
     python_requires=">=3.8, <4",
     install_requires=[
-        "sqlparse>=0.4.4",
-        "anyio>=3.5.0",
+        "sqlparse>=0.5.3",
+        "anyio>=4.9.0",
     ],
     extras_require={
         "dev": [
-            "pytest>=7.0",
-            "black>=23.0",
-            "flake8>=6.0",
-            "mypy>=1.0",
-            "pytest-cov>=4.0",
+            "pytest>=8.3.5",
+            "black>=25.1.0",
+            "flake8>=7.2.0",
+            "mypy>=1.15.0",
+            "pytest-cov>=6.0.0",
         ],
         "docs": [
-            "sphinx>=6.0",
-            "sphinx-rtd-theme>=1.0",
+            "sphinx>=8.2.3",
+            "sphinx-rtd-theme>=3.0.2",
         ],
     },
     # Package data and configuration
