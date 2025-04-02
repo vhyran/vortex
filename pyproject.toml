@@ -1,5 +1,5 @@
 [project]
-name = "sql-server"
+name = "vortex"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -15,4 +15,14 @@ dependencies = [
     "sphinx>=8.2.3",
     "sphinx-rtd-theme>=3.0.2",
     "sqlparse>=0.5.3",
+    "toml>=0.10.2",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["test"]
+
+[tool.black]
+line-length = 88
+
+[tool.mypy]
+strict = true
